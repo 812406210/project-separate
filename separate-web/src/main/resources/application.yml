@@ -13,12 +13,12 @@ spring:
         max-wait: 100000
 #公共配置与profiles选择无关
 mybatis-plus:
-  typeAliasesPackage: com.cn.commodity.entity
+  typeAliasesPackage: com.yangwj.separate.entity
   mapperLocations: classpath:mapper/*.xml
 
 logging:
   level:
-    com.cn.commodity.dao: debug
+    com.yangwj.separate.dao: debug
 
 config:
   path:

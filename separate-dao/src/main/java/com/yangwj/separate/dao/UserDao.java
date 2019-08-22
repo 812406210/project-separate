@@ -2,7 +2,9 @@ package com.yangwj.separate.dao;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.yangwj.separate.entity.User;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserDao extends BaseMapper<User> {
     int deleteByPrimaryKey(Integer id);
 

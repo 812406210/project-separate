@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.cn.commodity.dao.UserDao">
+<mapper namespace="com.yangwj.separate.dao.UserDao">
     <resultMap id="BaseResultMap" type="com.yangwj.separate.entity.User">
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="user_name" property="userName" jdbcType="VARCHAR"/>
@@ -17,8 +17,6 @@
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
         delete from user_t
         where id = #{id,jdbcType=INTEGER}
-        <include refid="Base_Column_List"/>
-        from user_t
     </delete>
     <insert id="insert" parameterType="com.yangwj.separate.entity.User">
         insert into user_t (id, user_name, password,

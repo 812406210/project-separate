@@ -27,10 +27,22 @@ public class UserController {
     @RequestMapping("delById")
     public String delUserById(HttpServletRequest request){
         String userId = request.getParameter("id");
-        int delRet = userDao.deleteByPrimaryKey(Integer.parseInt(userId));
-
+        int delRet = userService.deleteByPrimaryKey(Integer.parseInt(userId));
+        System.out.println(delRet);
         return delRet+"";
     }
 
+    @RequestMapping("add")
+    public String insertUser(HttpServletRequest request){
+        User user = new User();
+        for (int i = 1; i < 10000; i++) {
+            user.setAge(i);
+            user.setId(i);
+            user.setPassword("passwd"+i);
+            user.setUserName("userName"+i);
+            userService.insert(user);
+        }
+        return "success";
+    }
 
 }

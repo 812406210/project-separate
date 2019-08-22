@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 
-@MapperScan("com.yangwj.separate.*")
+@MapperScan("com.yangwj.separate.dao")
 @SpringBootApplication
 public class SeparateApplication extends SpringBootServletInitializer {
 
